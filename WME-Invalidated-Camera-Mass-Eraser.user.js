@@ -3,13 +3,13 @@
 // @namespace           https://github.com/TheCre8r/WME-Invalidated-Camera-Mass-Eraser/
 // @author              The_Cre8r and Myriades
 // @description         Allow delete visible, unvalidated and in your managed area all speed camera in 1 click!
-// @include             /^https:\/\/(www|beta)\.waze\.com\/(?!user\/)(.{2,6}\/)?editor\/?.*$/
+// @include             /^https:\/\/(www|beta)\.waze\.com\/(?!user\/)(.{2,6}\/)?editor.*$/
 // @icon                
-// @version             0.5.1.01
+// @version             0.5.1.02
 // @grant               WME_GB_Myriades
 // ==/UserScript==
 
-var wme_ucme_script_name = 'WME Unvalidated Camera Mass Eraser';
+var wme_ucme_script_name = 'WME Invalidated Camera Mass Eraser';
 wme_ucme_version = GM_info.script.version;
 var wme_ucme_script_url = 'https://greasyfork.org/scripts/2377-wme-invalidated-camera-mass-eraser';
 
@@ -76,7 +76,7 @@ function UCME_del_cams(){
 function UCME_html(){
 	WME_UCME_addon = document.createElement('div');
 	WME_UCME_addon.id = 'UCME_btn';
-	WME_UCME_addon.innerHTML = '<input type="button" class= "btn btn-danger" id="_UCME_btn" value="Delete nvalidated cameras" /><hr>';
+	WME_UCME_addon.innerHTML = '<input type="button" class= "btn btn-danger" id="_UCME_btn" value="Delete invalidated cameras" /><hr>';
 	UCME_userInfos.appendChild(WME_UCME_addon);
 	//	Event
 	getId('_UCME_btn').onclick = UCME_del_cams;
